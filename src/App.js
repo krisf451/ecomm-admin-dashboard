@@ -24,7 +24,7 @@ import {
 } from "./pages";
 
 const App = () => {
-  const activeMenu = false;
+  const activeMenu = true;
   return (
     <div>
       <Router>
@@ -44,7 +44,7 @@ const App = () => {
 
           {/* Active Menu Sidebar */}
           {activeMenu ? (
-            <div className="w-72 fixed dark:bg-secondary-dark-bg bg-white">
+            <div className="w-72 sidebar fixed dark:bg-secondary-dark-bg bg-white">
               <Sidebar />
             </div>
           ) : (
