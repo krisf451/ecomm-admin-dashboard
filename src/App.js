@@ -25,7 +25,7 @@ import {
 import { useStateContext } from "./contexts/ContextProvider";
 
 const App = () => {
-  const { activeMenu } = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings } = useStateContext();
   return (
     <div>
       <Router>
@@ -37,6 +37,7 @@ const App = () => {
                 type="button"
                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
                 style={{ background: "blue", borderRadius: "50%" }}
+                onClick={() => setThemeSettings(true)}
               >
                 <FiSettings />
               </button>
@@ -65,7 +66,8 @@ const App = () => {
             </div>
 
             {/* Theme Stuff */}
-            <ThemeSettings />
+            {themeSettings && <ThemeSettings />}
+
             {/* Routing */}
             <div>
               <Routes>
