@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import "./App.css";
-import { Navbar, Sidebar } from "./components";
+import { Navbar, Sidebar, ThemeSettings } from "./components";
 import {
   Ecommerce,
   Orders,
@@ -64,6 +64,8 @@ const App = () => {
               <Navbar />
             </div>
 
+            {/* Theme Stuff */}
+            <ThemeSettings />
             {/* Routing */}
             <div>
               <Routes>
