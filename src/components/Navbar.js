@@ -28,7 +28,6 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 const Navbar = () => {
   const {
-    activeMenu,
     setActiveMenu,
     isClicked,
     handleClick,
@@ -43,6 +42,7 @@ const Navbar = () => {
     handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
+    //eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -51,6 +51,7 @@ const Navbar = () => {
     } else {
       setActiveMenu(true);
     }
+    //eslint-disable-next-line
   }, [screenSize]);
 
   return (
